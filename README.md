@@ -1,11 +1,15 @@
-YOLOv5 Batch Person Detection from Dataset
+## **1. YOLOv5 Person Detection – `README.md`**
 
-This project implements **automated person detection** using the YOLOv5 object detection model. It scans through a structured dataset of images, performs detection using a pre-trained YOLOv5 model, and saves the output with bounding boxes.
+```markdown
+# YOLOv5 Batch Person Detection from Dataset
 
-📁 Dataset Structure
+This project implements automated person detection using the YOLOv5 object detection model. It processes a structured dataset of images, applies detection using a pre-trained YOLOv5 model, and saves the output images with bounding boxes.
 
-Make sure your dataset is structured like this:
+## Dataset Structure
 
+The dataset should follow this folder structure:
+
+```
 
 dataset/
 ├── subfolder1/
@@ -17,52 +21,42 @@ dataset/
 │       ├── image3.jpg
 │       └── image4.jpg
 
+````
 
- 🛠️ Tech Stack
+## Technologies Used
 
 - Python 3.x
 - PyTorch
 - OpenCV
-- YOLOv5 (via Torch Hub)
 - Matplotlib
+- YOLOv5 via Torch Hub
 
-🚀 How to Use
+## Usage Instructions
 
-1. **Install the dependencies**
+1. Install the required packages:
 ```bash
 pip install torch torchvision opencv-python matplotlib
 ````
 
-2. **Run the detection script**
+2. Place your dataset in the `./dataset` folder.
+
+3. Run the script:
 
 ```bash
 python detect_from_dataset.py
 ```
 
-> Make sure your dataset is in the `./dataset` folder, and the script is in the same root directory.
+4. Detected images with bounding boxes will be saved in the `./detections` folder, organized by subfolder.
 
-3. **Results**
+## Optional: Detect Only People
 
-* Annotated images will be saved in the `./detections` folder, under their respective subfolder names.
-* Detected images will include bounding boxes around people and other objects (unless modified to detect only persons).
-
-## 📌 Optional: Detect Only People
-
-If you'd like to restrict the model to detect only persons, modify the script with:
+To restrict detection to only persons (class 0 in the COCO dataset), modify the model as follows in the script:
 
 ```python
-model.classes = [0]  # Class 0 corresponds to 'person' in the COCO dataset
+model.classes = [0]
 ```
 
-## ✨ Output Example
+## Output
 
-Each image will be saved with YOLOv5-generated bounding boxes and shown via Matplotlib.
+The script saves the annotated images and optionally displays them using Matplotlib. You can include a sample output image in your repository to demonstrate results.
 
-
-## 🧠 What the Script Does
-
-* Loads YOLOv5s via PyTorch Hub
-* Recursively scans each subfolder in `./dataset`
-* Applies object detection on each image
-* Saves the detection outputs to `./detections/[subfolder]/`
-* Displays results using Matplotlib
