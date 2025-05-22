@@ -1,4 +1,4 @@
-1. YOLOv5 Person Detection 
+YOLOv5 Person Detection 
 
 This project implements automated person detection using the YOLOv5 object detection model. It processes a structured dataset of images, applies detection using a pre-trained YOLOv5 model, and saves the output images with bounding boxes.
 
