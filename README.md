@@ -45,7 +45,7 @@ python detect_from_dataset.py
 
 4. Detected images with bounding boxes will be saved in the `./detections` folder, organized by subfolder.
 
-Optional: Detect Only People
+## Optional: Detect Only People
 
 To restrict detection to only persons (class 0 in the COCO dataset), modify the model as follows in the script:
 
