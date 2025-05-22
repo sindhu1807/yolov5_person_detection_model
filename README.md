@@ -56,3 +56,7 @@ model.classes = [0]
 Output
 
 The script saves the annotated images and optionally displays them using Matplotlib. 
+ 
+## Screenshot
+ ![Screenshot (130)](https://github.com/user-attachments/assets/8ea13072-0943-488e-8fb1-8841b4811128)
+
