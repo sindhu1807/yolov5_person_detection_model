@@ -1,8 +1,8 @@
-YOLOv5 Person Detection 
+## YOLOv5 Person Detection 
 
 This project implements automated person detection using the YOLOv5 object detection model. It processes a structured dataset of images, applies detection using a pre-trained YOLOv5 model, and saves the output images with bounding boxes.
 
-Dataset Structure
+## Dataset Structure
 
 The dataset should follow this folder structure:
 
@@ -20,7 +20,7 @@ dataset/
 
 ````
 
-Technologies Used
+## Technologies Used
 
 - Python 3.x
 - PyTorch
@@ -28,7 +28,7 @@ Technologies Used
 - Matplotlib
 - YOLOv5 via Torch Hub
 
-Usage Instructions
+## Usage Instructions
 
 1. Install the required packages:
 ```bash
@@ -53,7 +53,7 @@ To restrict detection to only persons (class 0 in the COCO dataset), modify the 
 model.classes = [0]
 ```
 
-Output
+## Output
 
 The script saves the annotated images and optionally displays them using Matplotlib. 
  
